@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- .xsd tags -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+   
+<bean id="theDataServiceObject" class="com.Airtel.Services.DataService"></bean>
+<bean id="theHelloTuneServiceObject" class="com.Airtel.Services.HelloTuneService"></bean>
+<bean id="theMissedCallAlertServiceObject" class="com.Airtel.Services.MissedCallAlerService"></bean>
+
+<bean id = "airtelServices" class="com.Airtel.Services.Airltel">
+	<property name="services" ref="theMissedCallAlertServiceObject"></property>
+</bean>
+
+</beans>
